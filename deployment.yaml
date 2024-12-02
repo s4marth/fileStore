@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: file-store-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: file-store-service
+  template:
+    metadata:
+      labels:
+        app: file-store-service
+    spec:
+      containers:
+      - name: file-store-service
+        image: s4marth/file-store-service:latest
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - mountPath: /usr/src/app/store
+          name: file-storage
+      volumes:
+      - name: file-storage
+        emptyDir: {}

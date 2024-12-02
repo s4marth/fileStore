@@ -4,6 +4,10 @@ const { addFile, listFiles, removeFile, updateFile, countWordsInStore, getFreque
 const router = express.Router();
 
 //routes
+router.get('/', async(req, res)=>{
+    res.status(200).json({ message: 'hello there'});
+})
+
 router.post('/add', addFile);         
 router.get('/list', listFiles);        
 
