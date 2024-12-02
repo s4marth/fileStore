@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: file-store-service
-        image: s4marth/file-store-service:latest
+        image: s4marth/file-store-service:latest              #same from docker hub
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
         volumeMounts:
         - mountPath: /usr/src/app/store
           name: file-storage
