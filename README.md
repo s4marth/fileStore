@@ -1,6 +1,6 @@
 # File Store   
 
-A simple file store service implemented using Node.js that supports storing, updating, deleting, and performing operations on plain text files.  
+A simple file store service implemented using Node.js that supports storing, updating, deleting, and performing operations on plain text files through cli.  
 
 ## Features  
 - Add single or multiple files to the store.  
